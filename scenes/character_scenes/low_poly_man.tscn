@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cv6vsunlwnxt1"]
+
+[ext_resource type="PackedScene" uid="uid://dm7no154p2ywd" path="res://meshes/characters/low_poly_man.blend" id="1_8uimt"]
+
+[node name="low_poly_man" instance=ExtResource("1_8uimt")]
+
+[node name="Skeleton3D" parent="ManArmature-col" index="0"]
+bones/4/rotation = Quaternion(-0.497525, -0.403525, -0.601525, 0.544475)
+bones/5/rotation = Quaternion(-0.676525, 0.012475, -0.042525, 0.959475)
+bones/26/rotation = Quaternion(1.37448, 1.81048, -0.579525, 0.728475)

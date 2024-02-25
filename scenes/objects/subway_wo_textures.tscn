@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://butvx1p2x7ygb"]
+
+[ext_resource type="PackedScene" uid="uid://bwktwv7ioviy" path="res://meshes/objects/subway_wo_textures.blend" id="1_whqku"]
+
+[node name="subway_wo_textures" instance=ExtResource("1_whqku")]

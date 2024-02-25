@@ -1,0 +1,224 @@
+[gd_scene load_steps=7 format=3 uid="uid://bbv1tmky8wv4f"]
+
+[ext_resource type="PackedScene" uid="uid://butvx1p2x7ygb" path="res://scenes/objects/subway_wo_textures.tscn" id="1_m5yvu"]
+[ext_resource type="PackedScene" uid="uid://cv6vsunlwnxt1" path="res://scenes/character_scenes/low_poly_man.tscn" id="2_2xxwf"]
+[ext_resource type="Script" path="res://scripts/CharacterBody3D.gd" id="2_7aqmq"]
+
+[sub_resource type="Environment" id="Environment_p8fvg"]
+background_energy_multiplier = 1.23
+tonemap_mode = 2
+ssao_radius = 3.18
+ssao_intensity = 3.13
+sdfgi_use_occlusion = true
+sdfgi_read_sky_light = false
+sdfgi_bounce_feedback = 0.35
+glow_enabled = true
+glow_normalized = true
+glow_blend_mode = 0
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.0795
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_sk8h4"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_4g4dg"]
+
+[node name="Experiment" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.29697, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_p8fvg")
+
+[node name="subway_wo_textures" parent="." instance=ExtResource("1_m5yvu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.25675)
+
+[node name="Lighting" type="Node3D" parent="."]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.20646, 0)
+light_energy = 2.616
+shadow_enabled = true
+
+[node name="OmniLight3D6" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.45915, 4.90976, 3.55548)
+light_energy = 2.616
+shadow_enabled = true
+shadow_transmittance_bias = -5.259
+shadow_opacity = 0.73
+shadow_blur = 3.152
+
+[node name="OmniLight3D7" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.20646, 6.72981)
+light_energy = 2.616
+shadow_enabled = true
+
+[node name="OmniLight3D8" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.20646, 10.9073)
+light_energy = 2.616
+shadow_enabled = true
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.20646, -4.03786)
+light_energy = 2.616
+shadow_enabled = true
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.20646, -7.83543)
+light_energy = 2.616
+shadow_enabled = true
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.20646, -11.7101)
+light_energy = 2.616
+shadow_enabled = true
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.20646, -15.547)
+light_energy = 2.616
+shadow_enabled = true
+
+[node name="OmniLight3D9" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.05679, 3.8641, 0)
+visible = false
+light_energy = 2.172
+light_indirect_energy = 3.747
+light_volumetric_fog_energy = 0.192
+light_size = 0.111
+shadow_enabled = true
+
+[node name="OmniLight3D10" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.05679, 3.8641, 3.51229)
+visible = false
+light_energy = 2.172
+light_indirect_energy = 3.747
+light_volumetric_fog_energy = 0.192
+light_size = 0.111
+shadow_enabled = true
+
+[node name="OmniLight3D11" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.05679, 3.8641, 6.72981)
+visible = false
+light_energy = 2.172
+light_indirect_energy = 3.747
+light_volumetric_fog_energy = 0.192
+light_size = 0.111
+shadow_enabled = true
+
+[node name="OmniLight3D12" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.05679, 3.8641, 10.9073)
+visible = false
+light_energy = 2.172
+light_indirect_energy = 3.747
+light_volumetric_fog_energy = 0.192
+light_size = 0.111
+shadow_enabled = true
+
+[node name="OmniLight3D13" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.05679, 3.8641, -4.03786)
+visible = false
+light_energy = 2.172
+light_indirect_energy = 3.747
+light_volumetric_fog_energy = 0.192
+light_size = 0.111
+shadow_enabled = true
+
+[node name="OmniLight3D14" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.05679, 3.8641, -7.83543)
+visible = false
+light_energy = 2.172
+light_indirect_energy = 3.747
+light_volumetric_fog_energy = 0.192
+light_size = 0.111
+shadow_enabled = true
+
+[node name="OmniLight3D15" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.05679, 3.8641, -11.7101)
+visible = false
+light_energy = 2.172
+light_indirect_energy = 3.747
+light_volumetric_fog_energy = 0.192
+light_size = 0.111
+shadow_enabled = true
+
+[node name="OmniLight3D16" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.05679, 3.8641, -15.547)
+visible = false
+light_energy = 2.172
+light_indirect_energy = 3.747
+light_volumetric_fog_energy = 0.192
+light_size = 0.111
+shadow_enabled = true
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Lighting"]
+transform = Transform3D(0.875598, -0.210592, -0.434717, 0.400266, -0.18746, 0.897021, -0.270397, -0.959432, -0.0798468, 4.86315, 4.42143, 7.90815)
+light_color = Color(0.905882, 0.768627, 0.745098, 1)
+light_energy = 2.336
+light_indirect_energy = 4.183
+light_volumetric_fog_energy = 8.92
+light_size = 0.332
+light_specular = 4.557
+light_bake_mode = 0
+spot_range = 7.6178
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="Lighting"]
+transform = Transform3D(0.875598, -0.210592, -0.434717, 0.400266, -0.18746, 0.897021, -0.270397, -0.959432, -0.0798468, 4.86315, 4.42143, 3.06745)
+light_color = Color(0.905882, 0.768627, 0.745098, 1)
+light_energy = 2.336
+light_indirect_energy = 4.183
+light_volumetric_fog_energy = 8.92
+light_size = 0.332
+light_specular = 4.557
+light_bake_mode = 0
+spot_range = 7.6178
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="Lighting"]
+transform = Transform3D(0.875598, -0.210592, -0.434717, 0.400266, -0.18746, 0.897021, -0.270397, -0.959432, -0.0798468, 4.86315, 4.42143, -2.30855)
+light_color = Color(0.905882, 0.768627, 0.745098, 1)
+light_energy = 2.336
+light_indirect_energy = 4.183
+light_volumetric_fog_energy = 8.92
+light_size = 0.332
+light_specular = 4.557
+light_bake_mode = 0
+spot_range = 7.6178
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="Lighting"]
+transform = Transform3D(0.875598, -0.210592, -0.434717, 0.400266, -0.18746, 0.897021, -0.270397, -0.959432, -0.0798468, 4.86315, 4.42143, -8.12932)
+light_color = Color(0.905882, 0.768627, 0.745098, 1)
+light_energy = 2.336
+light_indirect_energy = 4.183
+light_volumetric_fog_energy = 8.92
+light_size = 0.332
+light_specular = 4.557
+light_bake_mode = 0
+spot_range = 7.6178
+
+[node name="SpotLight3D5" type="SpotLight3D" parent="Lighting"]
+transform = Transform3D(0.875598, -0.210592, -0.434717, 0.400266, -0.18746, 0.897021, -0.270397, -0.959432, -0.0798468, 4.86315, 4.42143, 13.5908)
+light_color = Color(0.905882, 0.768627, 0.745098, 1)
+light_energy = 2.336
+light_indirect_energy = 4.183
+light_volumetric_fog_energy = 8.92
+light_size = 0.332
+light_specular = 4.557
+light_bake_mode = 0
+spot_range = 7.6178
+
+[node name="HumanMeshes" type="Node3D" parent="."]
+
+[node name="low_poly_man" parent="HumanMeshes" instance=ExtResource("2_2xxwf")]
+transform = Transform3D(-0.0118289, 0, 0.184621, 0, 0.185, 0, -0.184621, 0, -0.0118289, 2.13262, 1.03153, 2.83008)
+
+[node name="Examined" type="CharacterBody3D" parent="."]
+transform = Transform3D(0.0281484, 0, -0.999604, 0, 1, 0, 0.999604, 0, 0.0281484, 0.358371, 2, 2.78063)
+script = ExtResource("2_7aqmq")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Examined"]
+shape = SubResource("CapsuleShape3D_sk8h4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Examined"]
+layers = 0
+mesh = SubResource("CapsuleMesh_4g4dg")
+
+[node name="Camera3D" type="Camera3D" parent="Examined"]
+transform = Transform3D(1, 0, -9.31323e-09, 0, 1, 0, 9.31323e-09, 0, 1, 0, 0.562428, 0)
+current = true
